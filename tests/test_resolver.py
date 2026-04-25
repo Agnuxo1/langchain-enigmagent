@@ -7,10 +7,10 @@ def test_placeholder_regex():
     assert PLACEHOLDER_RE.findall("Bearer {{TOKEN}} for {{user.id}}") == ["TOKEN", "user.id"]
 
 
-def test_substitute(monkeypatch):
+def test_substitute():
     client = EnigmAgentClient()
-    monkeypatch.setattr(client, "resolve", lambda p, o: f"<{p}>")
-    out = client.substitute("Authorization: Bearer {{GH_TOKEN}}", origin="https://api.github.com")
+    with patch.object(EnigmAgentClient, "resolve", lambda self, p, o: f"<{p}>"):
+        out = client.substitute("Authorization: Bearer {{GH_TOKEN}}", origin="https://api.github.com")
     assert out == "Authorization: Bearer <GH_TOKEN>"
 
 
