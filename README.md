@@ -1,10 +1,13 @@
 # langchain-enigmagent
 
+[![CI](https://github.com/Agnuxo1/langchain-enigmagent/actions/workflows/ci.yml/badge.svg)](https://github.com/Agnuxo1/langchain-enigmagent/actions/workflows/ci.yml)
 [![PyPI version](https://img.shields.io/pypi/v/langchain-enigmagent?label=pypi&color=blue)](https://pypi.org/project/langchain-enigmagent/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/langchain-enigmagent.svg)](https://pypi.org/project/langchain-enigmagent/)
 [![Python](https://img.shields.io/pypi/pyversions/langchain-enigmagent.svg)](https://pypi.org/project/langchain-enigmagent/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![LangChain](https://img.shields.io/badge/LangChain-0.3+-green.svg)](https://github.com/langchain-ai/langchain)
 [![EnigmAgent](https://img.shields.io/badge/EnigmAgent-MCP-purple.svg)](https://github.com/Agnuxo1/EnigmAgent)
+[![GitHub stars](https://img.shields.io/github/stars/Agnuxo1/langchain-enigmagent?style=social)](https://github.com/Agnuxo1/langchain-enigmagent)
 
 > **Last week I asked a LangChain agent to push a fix to a private GitHub repo. To do that, the agent needed my personal access token. I had three options, and all three were terrible: paste the token into the prompt (and into the provider's logs forever), give the agent a long-lived token it could reuse on its own at 3 a.m., or give up and do it by hand.**
 
