@@ -31,6 +31,10 @@ That's the entire install. The Python package talks to the local EnigmAgent REST
 
 ---
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> Runnable, callback and SecretStr helpers offer several ways to reuse one local vault connection across LangChain workflows. This can reduce repeated integration work and hard-coded credential configuration. The advantage depends on resolving values only within trusted tool code; the <a href="https://github.com/Agnuxo1/EnigmAgent/blob/main/docs/THREAT_MODEL.md">threat model</a> defines the limits of the approach.</sub>
+<!-- impact-note:end -->
+
 ## The problem (in LangChain terms)
 
 When you build a LangChain agent that needs to authenticate against a real API — GitHub, OpenAI, Stripe, your own backend — you face the same impossible choice every framework faces:
